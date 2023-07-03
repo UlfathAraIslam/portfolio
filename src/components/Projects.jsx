@@ -28,8 +28,6 @@ const Projects = () => {
                     <p className='py-6'></p>
                 </div>
 
-                {/* container for projects */}
-                {/* recipe project */}
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 https://effortless-rolypoly-944a41.netlify.app/images/projects1.pnggap-4 gap-5 ">
 
                     {/* project 1 */}
