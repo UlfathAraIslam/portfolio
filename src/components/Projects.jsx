@@ -1,13 +1,22 @@
 import React from 'react';
-import ProjectImg from '../assets/skills-img/workImg.jpeg'
-// import { data } from "../data/data.js";
+import ProjectImg1 from '../assets/skills-img/project_img1.png'
+import ProjectImg2 from '../assets/skills-img/project_img2.png'
+import ProjectImg3 from '../assets/skills-img/project_img3.png'
+import ProjectImg4 from '../assets/skills-img/project_img4.png'
+import ProjectImg5 from '../assets/skills-img/project_img5.png'
+import ProjectImg6 from '../assets/skills-img/project_img6.png'
+import ProjectImg7 from '../assets/skills-img/project_img7.png'
+import ProjectImg8 from '../assets/skills-img/project_img8.png'
+import ProjectImg9 from '../assets/skills-img/project_img9.png'
+import Carousel from './Carousel';
+
 
 
 const Projects = () => {
 
-    // projects file
-    // const project = data;
-    //setProject(data);
+    const projectImages1 = [ProjectImg1, ProjectImg2, ProjectImg3, ProjectImg4];
+    const projectImages2 = [ProjectImg5, ProjectImg6, ProjectImg7];
+    const projectImages3 = [ProjectImg8, ProjectImg9];
 
     return (
         <div name='projects' className='w-full md:h-screen text-gray-300 bg-[#0a192f]'>
@@ -20,57 +29,78 @@ const Projects = () => {
                 </div>
 
                 {/* container for projects */}
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {/* recipe project */}
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 https://effortless-rolypoly-944a41.netlify.app/images/projects1.pnggap-4 gap-5 ">
 
-                    {/* Gird Item */}
-                    <div style={{backgroundImage: `url(${ProjectImg})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-                        {/* hover effects */}
-                        <div className='opacity-0 group-hover:opacity-100 '>
-                            <span className='text-2xl font-bold text-white tracking-wider'>
-                                Project 1
-                            </span>
-                            <div className='pt-8 text-center'>
-                                <a href="">
-                                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Demo</button>
-                                </a>
-                                <a href="">
-                                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
-                                </a>
-                            </div>
+                    {/* project 1 */}
+                    <div className='flex flex-col gap-2 border rounded'>
+                        <Carousel
+                            images={projectImages1}
+                            demoLink="https://chef-recipe-hunter-assig-3eecf.web.app/"
+                            serverLink="https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-UlfathAraIslam"
+                            clientLink="https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-UlfathAraIslam" target="_blank"
+                        />
+                        <div className='p-4'>
+                            <p>Japanese Cuisine is a responsive web application that allows users to search for recipes based on the chefs.</p>
+                            <p className='text-pink-600'>Technologies: </p>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                                <li>REACT</li>
+                                <li>FIREBASE</li>
+                            </ul>
                         </div>
                     </div>
-                    <div style={{backgroundImage: `url(${ProjectImg})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-                        {/* hover effects */}
-                        <div className='opacity-0 group-hover:opacity-100'>
-                            <span className='text-2xl font-bold text-white tracking-wider'>
-                                Project 1
-                            </span>
-                            <div className='pt-8 text-center'>
-                                <a href="">
-                                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Demo</button>
-                                </a>
-                                <a href="">
-                                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
-                                </a>
-                            </div>
+
+
+                    {/* ------------------------------- */}
+                    {/* toy project */}
+
+                    <div className='flex flex-col gap-2 border rounded'>
+                    <Carousel
+                            images={projectImages2}
+                            demoLink="https://toy-market-place-7c9b9.web.app/add-toy"
+                            serverLink="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-server-side-UlfathAraIslam"
+
+                            clientLink="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-UlfathAraIslam" target="_blank"
+                        />
+                        <div className='p-4'>
+                            <p>It's an educational toy's responsive website. users can add toy and see all selected toys. they can add toy to database by filling up add toy form. </p>
+                            <p className='text-pink-600'>Technologies: </p>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                                <li>REACT</li>
+                                <li>FIREBASE</li>
+                                <li>MONGODB</li>
+                            </ul>
                         </div>
                     </div>
-                    <div style={{backgroundImage: `url(${ProjectImg})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-                        {/* hover effects */}
-                        <div className='opacity-0 group-hover:opacity-100'>
-                            <span className='text-2xl font-bold text-white tracking-wider'>
-                                Project 1
-                            </span>
-                            <div className='pt-8 text-center'>
-                                <a href="">
-                                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Demo</button>
-                                </a>
-                                <a href="">
-                                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
-                                </a>
-                            </div>
+
+
+                    {/* ------------- camp project */}
+                    <div className='flex flex-col gap-2 border rounded'>
+                    <Carousel
+                            images={projectImages3}
+                            demoLink="https://chef-recipe-hunter-assig-3eecf.web.app/"
+                            serverLink="https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-UlfathAraIslam"
+                            clientLink="https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-UlfathAraIslam" target="_blank"
+                        />
+                        <div className='p-4'>
+                            <p>JLLS is a online classes responsive project where students can select their classes after login.</p>
+                            <p className='text-pink-600'>Technologies: </p>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                                <li>REACT</li>
+                                <li>FIREBASE</li>
+                            </ul>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

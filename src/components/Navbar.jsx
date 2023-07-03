@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FaBars, FaGithub, FaLinkedin, FaTimes } from 'react-icons/fa';
-import { HiArrowNarrowRight, HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { Link } from 'react-scroll'
+import { HiArrowNarrowRight } from 'react-icons/hi';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
       <div>
-        <h1 className='text-4xl font-bold'>Ulfath</h1>
+        <h1 className='text-4xl font-bold'>Portfolio</h1>
       </div>
       {/* menu */}
       <div className='hidden md:flex'>
@@ -35,7 +35,7 @@ const Navbar = () => {
               Contact
             </Link></li>
             <button className='text-white rounded group border-2 px-1 py-1 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
-            <a href="https://drive.google.com/file/d/1tz5JlhmoaeGxgRu99iKGSD6BxfI45jhi/view?usp=sharing">Download
+            <a target="_blank" href="https://drive.google.com/file/d/1tz5JlhmoaeGxgRu99iKGSD6BxfI45jhi/view?usp=sharing">Download
             <br /> Resume</a>
             <span className='group-hover:rotate-90 duration-300'>
               <HiArrowNarrowRight className='ml-3 ' />
@@ -76,42 +76,38 @@ const Navbar = () => {
         </Link>
         </li>
         <li className='py-6 text-4xl'>
-        <Link onClick={handleClick} to="resume" spy={true} smooth={true} duration={500}>
-              Resume
-        </Link>
+        <button className='text-white rounded group border-2 px-1 py-1 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
+            <a target="_blank" href="https://drive.google.com/file/d/1tz5JlhmoaeGxgRu99iKGSD6BxfI45jhi/view?usp=sharing">Download
+            <br /> Resume</a>
+            <span className='group-hover:rotate-90 duration-300'>
+              <HiArrowNarrowRight className='ml-3 ' />
+            </span>
+          </button>
         </li>
       </ul>
       {/* social icons */}
       <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
-            <a
+            <a target="_blank"
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
+              href='https://www.linkedin.com/in/ulfath-ara-islam-54a54a280/'
             >
               Linkedin <FaLinkedin size={30} />
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-            <a
+            <a target="_blank"
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
+              href='https://github.com/UlfathAraIslam'
             >
               Github <FaGithub size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='/'
-            >
-              Email <HiOutlineMail size={30} />
-            </a>
-          </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-            <a
+            <a 
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
+              href='https://drive.google.com/file/d/1tz5JlhmoaeGxgRu99iKGSD6BxfI45jhi/view?usp=sharing'
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>
