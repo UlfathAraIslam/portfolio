@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaBars, FaGithub, FaLinkedin, FaTimes } from 'react-icons/fa';
-import { HiOutlineMail } from 'react-icons/hi';
+import { HiArrowNarrowRight, HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { Link } from 'react-scroll'
 
@@ -34,9 +34,13 @@ const Navbar = () => {
             <li><Link to="contact" spy={true} smooth={true} duration={500}>
               Contact
             </Link></li>
-            <li><Link to="resume" spy={true} smooth={true} duration={500}>
-              Resume
-            </Link></li>
+            <button className='text-white rounded group border-2 px-1 py-1 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
+            <a href="https://drive.google.com/file/d/1tz5JlhmoaeGxgRu99iKGSD6BxfI45jhi/view?usp=sharing">Download
+            <br /> Resume</a>
+            <span className='group-hover:rotate-90 duration-300'>
+              <HiArrowNarrowRight className='ml-3 ' />
+            </span>
+          </button>
         </ul>
       </div>
       {/* hamburger */}
