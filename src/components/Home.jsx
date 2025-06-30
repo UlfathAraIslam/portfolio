@@ -2,7 +2,7 @@
 import { Typewriter } from 'react-simple-typewriter'
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { Link } from 'react-scroll';
-import profileImg from '../assets/profile.png'
+import profileImg from '../../public/assets/profile.png'
 
 const Home = () => {
   return (

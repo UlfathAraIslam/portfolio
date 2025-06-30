@@ -3,7 +3,7 @@ import { FaBars, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import logoWhite from "../assets/logo-white.png";
+import logoWhite from "../../public/assets/logo-white.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);

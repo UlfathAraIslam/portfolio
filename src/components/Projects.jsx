@@ -1,19 +1,22 @@
 /* eslint-disable react/no-unescaped-entities */
-import ProjectImg1 from "../assets/skills-img/project_img1.png";
-import ProjectImg2 from "../assets/skills-img/project_img2.png";
-import ProjectImg3 from "../assets/skills-img/project_img3.png";
-import ProjectImg4 from "../assets/skills-img/project_img4.png";
-import ProjectImg5 from "../assets/skills-img/project_img5.png";
-import ProjectImg6 from "../assets/skills-img/project_img6.png";
-import ProjectImg7 from "../assets/skills-img/project_img7.png";
-import ProjectImg8 from "../assets/skills-img/project_img8.png";
-import ProjectImg9 from "../assets/skills-img/project_img9.png";
+// project1
+import ProjectImg1 from "../../public/assets/projects/project1/greenish.png";
+import ProjectImg2 from "../../public/assets/projects/project1/gardeners.png";
+import ProjectImg3 from "../../public/assets/projects/project1/login.png";
+//project2
+import ProjectImg4 from "../../public/assets/projects/project2/voluntree.png";
+import ProjectImg5 from "../../public/assets/projects/project2/volunteers.png";
+import ProjectImg6 from "../../public/assets/projects/project1/login.png";
+//project3
+import ProjectImg7 from "../../public/assets/projects/project3/missionMit.png";
+import ProjectImg8 from "../../public/assets/projects/project3/mobile.png";
+
 import Carousel from "./Carousel";
 
 const Projects = () => {
-  const projectImages1 = [ProjectImg1, ProjectImg2, ProjectImg3, ProjectImg4];
-  const projectImages2 = [ProjectImg5, ProjectImg6, ProjectImg7];
-  const projectImages3 = [ProjectImg8, ProjectImg9];
+  const projectImages1 = [ProjectImg1, ProjectImg2, ProjectImg3];
+  const projectImages2 = [ProjectImg4, ProjectImg5, ProjectImg6];
+  const projectImages3 = [ProjectImg7, ProjectImg8];
 
   return (
     <div

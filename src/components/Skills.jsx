@@ -1,15 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import HTML from "../assets/skills-img/html.png";
-import CSS from "../assets/skills-img/css.png";
-import JavaScript from "../assets/skills-img/javascript.png";
-import ReactImg from "../assets/skills-img/react.png";
-import Node from "../assets/skills-img/node.png";
-import FireBase from "../assets/skills-img/firebase.png";
-import GitHub from "../assets/skills-img/github.png";
-import Tailwind from "../assets/skills-img/tailwind.png";
-import Bootstrap from "../assets/skills-img/bootstrap.png";
-import Mongo from "../assets/skills-img/mongo.png";
+import HTML from "../../public/assets/skills-img/html.png";
+import CSS from "../../public/assets/skills-img/css.png";
+import JavaScript from "../../public/assets/skills-img/javascript.png";
+import ReactImg from "../../public/assets/skills-img/react.png";
+import Node from "../../public/assets/skills-img/node.png";
+import FireBase from "../../public/assets/skills-img/firebase.png";
+import GitHub from "../../public/assets/skills-img/github.png";
+import Tailwind from "../../public/assets/skills-img/tailwind.png";
+import Bootstrap from "../../public/assets/skills-img/bootstrap.png";
+import Mongo from "../../public/assets/skills-img/mongo.png";
 
 const Skills = () => {
   return (
