@@ -12,7 +12,7 @@ const About = () => {
     <div name='about' className='w-full h-screen bg-[#0a192f] text-gray-300 flex flex-col justify-center items-center'>
       <div className='max-w-[1000px] w-full flex justify-center items-center pb-8'>
         <animated.h2 className='text-4xl font-bold inline border-b-4 border-pink-600 text-center' style={fadeProps}>
-          About
+          About Me
         </animated.h2>
       </div>
 

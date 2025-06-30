@@ -1,116 +1,145 @@
 /* eslint-disable react/no-unescaped-entities */
-// project1
 import ProjectImg1 from "../../public/assets/projects/project1/greenish.png";
-import ProjectImg2 from "../../public/assets/projects/project1/gardeners.png";
-import ProjectImg3 from "../../public/assets/projects/project1/login.png";
-//project2
 import ProjectImg4 from "../../public/assets/projects/project2/voluntree.png";
-import ProjectImg5 from "../../public/assets/projects/project2/volunteers.png";
-import ProjectImg6 from "../../public/assets/projects/project1/login.png";
-//project3
 import ProjectImg7 from "../../public/assets/projects/project3/missionMit.png";
-import ProjectImg8 from "../../public/assets/projects/project3/mobile.png";
 
-import Carousel from "./Carousel";
+import { HiGlobe } from "react-icons/hi";
+import { FaGithub, FaServer } from "react-icons/fa";
+import { AiOutlineInfoCircle } from "react-icons/ai";
+
+const projectsData = [
+  {
+    id: 1,
+    image: ProjectImg1,
+    alt: "Greenish",
+    title: "Greenish - Gardening Community Platform",
+    description:
+      "A community platform for gardening lovers to connect, share tips, browse content, and explore nearby enthusiasts.",
+    features: [
+      "Community connection for gardening enthusiasts",
+      "Interactive gardening tips & articles",
+      "User authentication with Firebase",
+    ],
+    technologies: "React, Tailwind CSS, Firebase, JavaScript",
+    links: {
+      live: "https://greenish-9ea31.web.app/",
+      client: "https://github.com/UlfathAraIslam/greenish-frontend",
+      server: "https://github.com/UlfathAraIslam/greenish-server",
+      details: "",
+    },
+  },
+  {
+    id: 2,
+    image: ProjectImg4,
+    alt: "Voluntree",
+    title: "Voluntree - Volunteer Management System",
+    description:
+      "A responsive volunteer platform for organizations to post needs and users to apply for volunteering.",
+    features: [
+      "Post & manage volunteer opportunities",
+      "Users can apply to be volunteers",
+      "Dashboard with volunteer statistics",
+    ],
+    technologies: "React, Firebase, MongoDB, Tailwind CSS",
+    links: {
+      live: "https://voluntree-ad593.web.app",
+      client:
+        "https://github.com/UlfathAraIslam/voluntree-client",
+      server:
+        "https://github.com/UlfathAraIslam/voluntree-server",
+      details: "",
+    },
+  },
+  {
+    id: 3,
+    image: ProjectImg7,
+    alt: "Mission MIT",
+    title: "Mission MIT - Education Goal Platform",
+    description:
+      "An interactive educational roadmap website to track goals, access resources, and stay motivated.",
+    features: [
+      "Goal tracking and roadmap progress",
+      "Educational resource sharing",
+      "User-friendly responsive design",
+    ],
+    technologies: "React, Firebase Auth, Tailwind CSS",
+    links: {
+      live: "https://mission-mit.web.app/",
+      client:
+        "https://github.com/UlfathAraIslam/mission-MIT",
+      details: "",
+    },
+  },
+];
+
+const buttonInfo = [
+  { key: "live", icon: HiGlobe, label: "Live Site" },
+  { key: "client", icon: FaGithub, label: "Client Repository" },
+  { key: "server", icon: FaServer, label: "Server Repository" },
+  { key: "details", icon: AiOutlineInfoCircle, label: "Details" },
+];
 
 const Projects = () => {
-  const projectImages1 = [ProjectImg1, ProjectImg2, ProjectImg3];
-  const projectImages2 = [ProjectImg4, ProjectImg5, ProjectImg6];
-  const projectImages3 = [ProjectImg7, ProjectImg8];
-
   return (
-    <div
-      name="projects"
-      className="w-full md:h-screen text-gray-300 bg-[#0a192f]"
-    >
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className="pb-8 w-full flex flex-col justify-center items-center">
+    <div name="projects" className="w-full text-gray-300 bg-[#0a192f] py-12">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full">
+        <div className="pb-8 text-center">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
             Projects
           </p>
-          <p className="py-6"></p>
+          <p className="py-4">
+            Here are some of my recent projects with key features and
+            technologies.
+          </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 https://effortless-rolypoly-944a41.netlify.app/images/projects1.pnggap-4 gap-5 ">
-          {/* project 1 */}
-          <div className="flex flex-col gap-2 border rounded">
-            <Carousel
-              images={projectImages1}
-              demoLink="https://greenish-9ea31.web.app/"
-              serverLink="https://github.com/UlfathAraIslam/greenish-server"
-              clientLink="https://github.com/UlfathAraIslam/greenish-frontend"
-              target="_blank"
-            />
-            <div className="p-4">
-              <p>
-                A community platform for gardening lovers to connect, share
-                tips, browse gardening content, and explore fellow green thumbs
-                near them.
-              </p>
-              <p className="text-pink-600">Technologies: </p>
-              <ul>
-                <li>React</li>
-                <li>Tailwind CSS</li>
-                <li>Firebase Auth</li>
-                <li>Javascript</li>
+        {projectsData.map((project) => (
+          <div
+            key={project.id}
+            className="flex flex-col md:flex-row items-center gap-8 border border-gray-700 rounded p-4 mb-8"
+          >
+            <div className="md:w-1/2 h-[300px] overflow-y-auto">
+              <img
+                src={project.image}
+                alt={project.alt}
+                className="rounded shadow-lg w-full object-cover"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h3 className="text-2xl font-bold text-pink-600 mb-2">
+                {project.title}
+              </h3>
+              <p className="mb-3">{project.description}</p>
+              <ul className="list-disc list-inside mb-3">
+                {project.features.map((feature, i) => (
+                  <li key={i}>{feature}</li>
+                ))}
               </ul>
+              <p className="text-pink-600 font-semibold mb-2">Technologies:</p>
+              <p className="mb-4">{project.technologies}</p>
+
+              <div className="flex gap-4 flex-wrap mt-4">
+                {buttonInfo.map(({ key, icon: Icon, label }) => {
+                  const url = project.links[key];
+                  if (!url) return null;
+                  return (
+                    <a
+                      key={key}
+                      href={url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={label}
+                      title={label}
+                      className="border-2 px-4 py-2 rounded hover:bg-pink-600 hover:border-pink-600 flex items-center justify-center"
+                    >
+                      <Icon size={24} />
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
-
-          {/* ------------------------------- */}
-          {/* toy project */}
-
-          <div className="flex flex-col gap-2 border rounded">
-            <Carousel
-              images={projectImages2}
-              demoLink="https://toy-market-place-7c9b9.web.app/add-toy"
-              serverLink="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-server-side-UlfathAraIslam"
-              clientLink="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-UlfathAraIslam"
-              target="_blank"
-            />
-            <div className="p-4">
-              <p>
-                It's an educational toy's responsive website. users can add toy
-                and see all selected toys. they can add toy to database by
-                filling up add toy form.{" "}
-              </p>
-              <p className="text-pink-600">Technologies: </p>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>REACT</li>
-                <li>FIREBASE</li>
-                <li>MONGODB</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* ------------- camp project */}
-          <div className="flex flex-col gap-2 border rounded">
-            <Carousel
-              images={projectImages3}
-              demoLink="https://chef-recipe-hunter-assig-3eecf.web.app/"
-              serverLink="https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-UlfathAraIslam"
-              clientLink="https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-UlfathAraIslam"
-              target="_blank"
-            />
-            <div className="p-4">
-              <p>
-                JLLS is a online classes responsive project where students can
-                select their classes after login.
-              </p>
-              <p className="text-pink-600">Technologies: </p>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>REACT</li>
-                <li>FIREBASE</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

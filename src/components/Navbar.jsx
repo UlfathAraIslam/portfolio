@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { FaBars, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import logoWhite from "../../public/assets/logo-white.png";
@@ -91,41 +90,6 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
-
-      {/* Social Icons */}
-      <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
-        <ul>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
-            <a
-              target="_blank"
-              rel="noreferrer"
-              className="flex justify-between items-center w-full text-gray-300"
-              href="https://www.linkedin.com/in/ulfath-ara-islam-54a54a280/"
-            >
-              Linkedin <FaLinkedin size={30} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
-            <a
-              target="_blank"
-              rel="noreferrer"
-              className="flex justify-between items-center w-full text-gray-300"
-              href="https://github.com/UlfathAraIslam"
-            >
-              Github <FaGithub size={30} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
-            <a
-              className="flex justify-between items-center w-full text-gray-300"
-              href="resume.pdf"
-              download
-            >
-              Resume <BsFillPersonLinesFill size={30} />
-            </a>
-          </li>
-        </ul>
-      </div>
     </div>
   );
 };
